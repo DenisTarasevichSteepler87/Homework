@@ -7,22 +7,17 @@ void FillArray(double[] array)
     for (int i = 0; i < array.Length; i++)
         array[i] = new Random().Next(100) + Math.Round(new Random().NextDouble(), 2);
 }
-
 void PrintArray(double[] array)
 {
     foreach (double item in array)
         System.Console.Write($"{item} ");
     System.Console.WriteLine();
 }
-
-
-
 double DifferenceArray(double[] array)
 {
     double result = 0;
     double max = array[0];
     double min = array[0];
-
     for (int i = 0; i < array.Length; i++)
     {
 
@@ -34,7 +29,6 @@ double DifferenceArray(double[] array)
     }
     return result;
 }
-
 double[] array = new double[5];
 FillArray(array);
 PrintArray(array);
