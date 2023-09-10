@@ -22,7 +22,7 @@ void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        System.Console.Write($"a[{i}]= {array[i]}");
+        System.Console.WriteLine($"a[{i}]= {array[i]}");
     }
 }
 int CountPositiveNumbers(int[] array)
