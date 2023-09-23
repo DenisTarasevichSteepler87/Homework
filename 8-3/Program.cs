@@ -15,41 +15,41 @@ int cols = Convert.ToInt32(Console.ReadLine());
 
 void WorkMatrix(int[,] firstMartrix, int[,] secondMartrix, int[,] resultMatrix)
 {
-  for (int i = 0; i < resultMatrix.GetLength(0); i++)
-  {
-    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    for (int i = 0; i < resultMatrix.GetLength(0); i++)
     {
-      int sum = 0;
-      for (int k = 0; k < firstMartrix.GetLength(1); k++)
-      {
-        sum += firstMartrix[i,k] * secondMartrix[k,j];
-      }
-      resultMatrix[i,j] = sum;
+        for (int j = 0; j < resultMatrix.GetLength(1); j++)
+        {
+            int sum = 0;
+            for (int k = 0; k < firstMartrix.GetLength(1); k++)
+            {
+                sum += firstMartrix[i, k] * secondMartrix[k, j];
+            }
+            resultMatrix[i, j] = sum;
+        }
     }
-  }
 }
 
 void FillArray(int[,] array)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      array[i, j] = new Random().Next(1,3);
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 3);
+        }
     }
-  }
 }
 
-void PrintArray (int[,] array)
+void PrintArray(int[,] array)
 {
-  for (int i = 0; i < array.GetLength(0); i++)
-  {
-    for (int j = 0; j < array.GetLength(1); j++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-      System.Console.Write(array[i,j] + " ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            System.Console.Write(array[i, j] + " ");
+        }
+        System.Console.WriteLine();
     }
-    System.Console.WriteLine();
-  }
 }
 int[,] firstMartrix = new int[rows, colsrows];
 FillArray(firstMartrix);
@@ -61,7 +61,7 @@ FillArray(secondMartrix);
 System.Console.WriteLine($"Вторая матрица:");
 PrintArray(secondMartrix);
 
-int[,] resultMatrix = new int[rows,cols];
+int[,] resultMatrix = new int[rows, cols];
 
 WorkMatrix(firstMartrix, secondMartrix, resultMatrix);
 System.Console.WriteLine();
